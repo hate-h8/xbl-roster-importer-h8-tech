@@ -39,7 +39,7 @@ export function usePlayerValidation(players: SheetPlayer[]) {
           pitcher.curve, pitcher.slider, pitcher.fork, pitcher.screw
         ].filter(Boolean).length;
         
-        if (pitchCount < 2) {
+        if (pitchCount < 1 || pitchCount > 5) {
           return false;
         }
       } else {
